@@ -1,0 +1,16 @@
+
+import random
+import time
+
+lower_bound = 1
+upper_bound = 100
+
+print("Welcome to Guess the Number - AI GUESSES YOUR NUMBER!")
+print("Think of a number between", lower_bound, "and", upper_bound)
+time.sleep(3)  # Pause for 3 seconds
+print("Let me try to guess the number you are thinking of.")
+time.sleep(1)
+print("Respond with 'HHH' if the guess is very high, 'LLL' if it's very low, and 'CCC' if I guessed correctly.")
+time.sleep(2)
+print("We Start!")
+
