@@ -1,8 +1,10 @@
 import random
 import time
 
+
 def generate_guess(lower_bound, upper_bound):
     return random.randint(lower_bound, upper_bound)
+
 
 def get_user_feedback():
     user_response = input("Is the guess correct? (H/L/C): ").upper()
@@ -10,6 +12,7 @@ def get_user_feedback():
         print("Invalid input. Please enter 'H', 'L', or 'C'.")
         user_response = input("Is the guess correct? (H/L/C): ").upper()
     return user_response
+
 
 def main():
     lower_bound = 1
