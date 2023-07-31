@@ -1,0 +1,28 @@
+import random
+
+def ai_guess_number(min_num, max_num):
+    print(f"Think of a number between {min_num} and {max_num}.")
+    input("Press Enter when you are ready.")
+
+    while True:
+        guess = random.randint(min_num, max_num)
+        print(f"Is your number {guess}?")
+        user_response = input("Enter 'h' if it's higher, 'l' if it's lower, or 'c' if it's correct: ").lower()
+
+        if user_response == 'h':
+            min_num = guess + 1
+        elif user_response == 'l':
+            max_num = guess - 1
+        elif user_response == 'c':
+            print(f"yeeiiy! I guessed your number correctly.")
+            break
+        else:
+            print("Invalid input. Please enter 'h', 'l', or 'c'.")
+
+if __name__ == "__main__":
+    min_range = 1  # Minimum number for the guessing range
+    max_range = 100  # Maximum number for the guessing range
+
+    ai_guess_number(min_range, max_range)
+
+    print("Thanks for playing thee Guessing Game :)")
